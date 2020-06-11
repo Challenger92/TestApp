@@ -5,9 +5,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using TestApp.API.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Testing.API.Hello
 {
+    [Authorize]
     [Route("testing/Hello")]
     [ApiController]
 
@@ -29,6 +31,7 @@ namespace Testing.API.Hello
 
         }
 
+        [AllowAnonymous]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetEmployee(int id)
         {
