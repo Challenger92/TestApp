@@ -12,7 +12,7 @@ using TestApp.API.Models;
 
 namespace TestApp.API.Controllers
 {
-    [Route("testing/hi")]
+    [Route("testing/log")]
     [ApiController]
     public class AuthController : ControllerBase
     {

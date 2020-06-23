@@ -21,6 +21,7 @@ namespace Testing.API.Hello
             _outData = outData;
 
         }
+        [AllowAnonymous]
         [HttpGet]
         public async Task<IActionResult> GetEmployees()
         {
